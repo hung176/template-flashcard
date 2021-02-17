@@ -6,19 +6,19 @@ import Footer from './Footer';
 
 import './App.css';
 
-function App({ word, imageUrl, meaning }) {
+function App({ word, imageUrl, meaning, color }) {
   return (
     <div className="container">
       <Header />
 
-      <CardContainer>
+      <CardContainer style={{ backgroundColor: color }}>
         <CardFront
           word={word}
           imageUrl={imageUrl} 
         />
       </CardContainer>
       
-      <CardContainer>
+      <CardContainer style={{ backgroundColor: color }}>
         <CardBack word={word} meaning={meaning} />
       </CardContainer>
 
