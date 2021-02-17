@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import CardContainer from './CardContainer';
+import CardFront from './CardFront';
+import CardBack from './CardBack';
+
 import './App.css';
 
-function App() {
+function App({ word, imageUrl, meaning }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+      <CardContainer>
+        <CardFront
+          word={word}
+          imageUrl={imageUrl} 
+        />
+      </CardContainer>
+      
+      <CardContainer>
+        <CardBack word={word} meaning={meaning} />
+      </CardContainer>
+
+  </div>
   );
 }
 
