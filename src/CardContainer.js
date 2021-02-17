@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function CardContainer({ children }) {
+export default function CardContainer({ children, color }) {
   return (
-    <div className="card-container">{children}</div>
+    <div className="card-container" style={{ backgroundColor: color }}>{children}</div>
   );
 }

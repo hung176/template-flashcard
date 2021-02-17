@@ -11,14 +11,14 @@ function App({ word, imageUrl, meaning, color }) {
     <div className="container">
       <Header />
 
-      <CardContainer style={{ backgroundColor: color }}>
+      <CardContainer color={color}>
         <CardFront
           word={word}
           imageUrl={imageUrl} 
         />
       </CardContainer>
       
-      <CardContainer style={{ backgroundColor: color }}>
+      <CardContainer color={color}>
         <CardBack word={word} meaning={meaning} />
       </CardContainer>
 
